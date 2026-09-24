@@ -79,9 +79,39 @@ The circuits used to generate a frequency modulation must vary the frequency of 
 * If any Error, correct it in code and execute again.
 * Verify the generated waveform using Tabulation and Model Waveform.
 
----
+## PROGRAM
+am=7.2;
 
-## MODEL GRAPH
+fm=448;
+
+ac=14.4;
+
+fc=4480;
+
+fs=44800;
+
+t=0:1/fs:2/fm;
+
+b=4.7;
+
+em=amcos(23.14fmt);
+
+subplot(3,1,1);
+
+plot(t,em);
+
+ec=accos(23.14fct);
+
+subplot(3,1,2);
+
+plot(t,ec);
+
+efm = ac * cos((23.14fct) + b * sin(23.14fmt));
+
+subplot(3,1,3);
+
+plot(t,efm);
+
 
 ## Tabulation 
 
